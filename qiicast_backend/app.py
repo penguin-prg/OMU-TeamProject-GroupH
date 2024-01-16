@@ -63,6 +63,7 @@ async def get_article(tag: str, num_articles: int = 1):
                 "rating": inference_result,
                 "created_at": each_article["created_at"],
                 "user": each_article["user"],
+                "tags": each_article["tags"],
             }
         )
     return response_data
