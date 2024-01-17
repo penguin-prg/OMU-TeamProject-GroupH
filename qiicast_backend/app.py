@@ -28,8 +28,10 @@ app.add_middleware(
 
 # InferenceEngineの初期化
 infer = InferenceEngine()
-infer._initialize_processor("nobo_model")
+# infer._initialize_processor("nobo_model")
 # infer._initialize_processor("ik_model")
+infer._initialize_processor("penguin_model")
+
 
 # ルートエンドポイントへのGETリクエストに対するハンドラ
 @app.get("/")
@@ -38,6 +40,7 @@ async def get():
     ダミーのハローワールドレスポンスを返すエンドポイント
     """
     return "Hello World"
+
 
 # /get_article エンドポイントへのGETリクエストに対するハンドラ
 @app.get("/get_article")
@@ -54,7 +57,7 @@ async def get_article(tag: str, num_articles: int = 1):
     for each_article in meta_data_articles:
         # 推論エンジンを使用して記事の評価を予測
         inference_result = infer.predict("nobo_model", each_article)
-        
+
         # レスポンスデータに記事情報と推論結果を追加
         response_data.append(
             {
