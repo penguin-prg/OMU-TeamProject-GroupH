@@ -1,5 +1,6 @@
 from lib.inference.ik_model import IkModel
 from lib.inference.nobo_model import NoboModel
+from lib.inference.penguin_model import PenguinModel
 
 
 class InferenceEngine:
@@ -14,6 +15,8 @@ class InferenceEngine:
             self._processor = IkModel(model_path="./model/ik_model.pkl")
         elif model_name == "nobo_model":
             self._processor = NoboModel(model_path="./model/nobo_model.pkl")
+        elif model_name == "penguin_model":
+            self._processor = PenguinModel(model_path="./model/penguin_model.pkl")
         else:
             raise ValueError("model_name must be 'ik_model' or 'nobo_model'")
 
