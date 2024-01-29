@@ -1,4 +1,4 @@
-secret.yml
+# secret.yml
 .env
 *.log
 *.pyc
@@ -12,7 +12,7 @@ weight/
 develop/
 dir_in/
 development/
-model/
+# model/
 output_result/
 
 # Repo-specific GitIgnore ----------------------------------------------------------------------------------------------
@@ -101,7 +101,7 @@ wheels/
 wandb/
 .installed.cfg
 *.egg
-conf/
+# conf/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
