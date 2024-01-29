@@ -9,5 +9,5 @@ RUN pip install polars==0.19.2
 RUN pip install streamlit
 RUN pip install pyyaml
 RUN pip install streamlit-card
-COPY qiicast_backend /app/backend
-COPY qiicast_frontend /app/frontend
+COPY qiicast_backend /app/qiicast_backend
+COPY qiicast_frontend /app/qiicast_frontend
